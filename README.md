@@ -1,40 +1,71 @@
-# Documentation Template created by Diplodoc
+# leantoken.tech media docs
 
-Features:
+This repository contains the published documentation source for `leantoken.tech`.
+The site is built with Diplodoc from `docs/` into `docs-html/`.
 
-- initial project structure
-- dev server with hot reload
-- codespaces support
-- vscode tutorial via code tours
+## Local development
 
-## Initial project structure
+Install dependencies:
 
-Initiatl project structure with basic content can be found within your public github repo "diplodoc-example/docs" 
-
-## Usage
-
-### Run locally by cloning repo:
-
+```bash
+npm ci
 ```
-> git clone git@github.com:diplodoc-platform/documentation-template.git
 
-> cd documentation-template
+Start the local preview server with rebuilds enabled:
 
-> npm start
-
-> listening on 0.0.0.0:8000
-
+```bash
+npm start
 ```
-now you have development server with hot reload runing and serving built documentation on `0.0.0.0:8000`
 
-### github codespaces
+The preview server listens on `http://0.0.0.0:8077/` and redirects the root page to `http://0.0.0.0:8077/ru/index.html`.
 
-press Use this template -> Open in a codespace
+Build the static site without starting the watcher:
 
-![open in a codespace](images/open-in-a-codespace.jpeg)
+```bash
+npm run build:docs
+```
 
-wait for the development server startup
+The generated output is written to `docs-html/`.
 
-enjoy developing documentation with html result preview in split view
+## Deploy to Dokploy
 
-![codespaces project](images/codespaces-project.jpeg)
+Use a Dokploy `Application`, not `Compose`.
+
+This repository builds into one static website and now includes a production `Dockerfile` for Dokploy. The container:
+
+- builds the docs with `npm run build:docs`
+- serves `docs-html/` with `nginx`
+- redirects `/` to `/ru/index.html` to match the intended primary language entrypoint
+
+### Dokploy setup
+
+1. Create a new `Application` in Dokploy.
+2. Connect the Git repository and choose the branch you want to deploy.
+3. Set the build type to `Dockerfile`.
+4. Keep the Dockerfile path as `./Dockerfile` unless you move it.
+5. Expose container port `80`.
+6. Attach your domain in Dokploy and deploy.
+
+No environment variables are required for the current production build.
+
+## Docker build locally
+
+Build the production image:
+
+```bash
+docker build -t leantoken-tech-media-docs .
+```
+
+Run it locally:
+
+```bash
+docker run --rm -p 8080:80 leantoken-tech-media-docs
+```
+
+Then open `http://localhost:8080/`.
+
+## Repository notes
+
+- Source content lives under `docs/` and `sources/projects/`.
+- Published shared images live under `images/`.
+- `docs-html/` is generated output and should not be edited manually.
