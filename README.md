@@ -3,6 +3,10 @@
 This repository contains the published documentation source for `leantoken.tech`.
 The site is built with Diplodoc from `docs/` into `docs-html/`.
 
+Production site: `https://leantoken.unico.rn.it`
+
+Public docs source repository: `https://github.com/niktverd/leantoken-media-docs`
+
 ## Local development
 
 Install dependencies:
@@ -48,6 +52,8 @@ This repository builds into one static website and now includes a production `Do
 
 No environment variables are required for the current production build.
 
+Current production address: `https://leantoken.unico.rn.it`
+
 ## Docker build locally
 
 Build the production image:
@@ -67,5 +73,6 @@ Then open `http://localhost:8080/`.
 ## Repository notes
 
 - Source content lives under `docs/` and `sources/projects/`.
+- Public docs source repository: `https://github.com/niktverd/leantoken-media-docs`
 - Published shared images live under `images/`.
 - `docs-html/` is generated output and should not be edited manually.

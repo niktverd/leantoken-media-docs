@@ -3,3 +3,5 @@ href: index.yaml
 items:
   - name: JetBrains IDEs
     href: jetbrains-ides/byok.md
+  - name: Исходники документации
+    href: source-repo.md
