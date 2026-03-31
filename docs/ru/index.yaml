@@ -1,0 +1,5 @@
+title: Документация Leantoken.tech
+description: Руководства по подключению AI-сервисов через Bring Your Own Key на leantoken.tech. В каждом разделе описан сервис, практические сценарии использования AI и поток настройки BYOK.
+links:
+  - title: JetBrains IDEs
+    href: jetbrains-ides/byok.md

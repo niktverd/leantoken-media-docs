@@ -1,0 +1,4 @@
+langs: ['en', 'es', 'ru']
+
+docs-viewer:
+  langs: ['en', 'es', 'ru']
