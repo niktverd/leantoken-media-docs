@@ -2,17 +2,17 @@
 
 ![Saved OpenClaw landing page with the product logo and tagline](../../images/openclaw/openclaw.png)
 
-## Service Description
+## About the Service
 
-OpenClaw is a personal AI assistant that you run on your own devices. In the saved materials, the service is described as a self-hosted assistant with Gateway acting as the control plane: through it, OpenClaw connects models, channels, tools, skills, sessions, and WebChat.
+OpenClaw is a personal AI assistant that you run on your own devices. In the saved materials, the service is described as a self-hosted assistant with Gateway acting as the control plane: through it, OpenClaw connects models, communication channels, tools, skills, sessions, and WebChat.
 
-OpenClaw can work in the channels you already use, including WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, BlueBubbles, Microsoft Teams, Matrix, WeChat, WebChat, and more. The saved materials also mention voice workflows on macOS, iOS, and Android, a live Canvas, browser control, skills, and multi-agent routing.
+OpenClaw can work in the channels you already use: WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, BlueBubbles, Microsoft Teams, Matrix, WeChat, WebChat, and others. The materials also mention voice scenarios on macOS, iOS, and Android, live Canvas, browser control, skills, and multi-agent routing.
 
 The recommended setup path is consistent across the saved OpenClaw materials: first install the CLI, then run `openclaw onboard`, and inside onboarding configure Gateway, workspace, model access, channels, and skills.
 
-## What You Need
+## What You Will Need
 
-- Node.js 24 is recommended, Node.js 22.16+ is supported
+- Node.js 24 is recommended; Node.js 22.16+ is supported
 - macOS or Linux; the OpenClaw materials recommend WSL2 for Windows
 - an account on `https://leantoken.tech`
 - a LeanToken API key and, if needed, an OpenAI-compatible base URL
@@ -20,20 +20,20 @@ The recommended setup path is consistent across the saved OpenClaw materials: fi
 
 ## AI Use Cases
 
-Based on the saved materials, OpenClaw is especially useful for these scenarios:
+Based on the saved materials, OpenClaw is especially useful in these scenarios:
 
-- a personal AI assistant in messaging apps and WebChat that replies in your usual channels instead of a separate web interface
-- development help: codebase understanding, test runs, error investigation, GitHub work, and pull request preparation
-- DevOps and operational work: log inspection, service monitoring, alerts, and repeated runbook tasks
-- research workflows: search, synthesis, note work, and knowledge-oriented tasks
-- voice workflows and device-local actions through companion apps and nodes
-- browser automation, Canvas workflows, and other tool-driven tasks
+- a personal AI assistant in messengers and WebChat that replies in your usual channels instead of a separate web chat
+- development help: codebase review, test runs, debugging, GitHub work, and pull request preparation
+- DevOps and operational tasks: log inspection, service monitoring, alerts, and recurring runbook processes
+- research work: information search and synthesis, note-taking, and knowledge workflows
+- voice scenarios and device-local actions through companion apps and nodes
+- browser automation, Canvas workflows, and other tool-driven processes
 
-If you use BYOK through `leantoken.tech`, one gateway and one set of credentials can be reused across all of these scenarios instead of depending only on a bundled provider OAuth subscription.
+If you use BYOK through `leantoken.tech`, one gateway and one set of credentials can be reused across all of these scenarios instead of relying only on a bundled provider OAuth subscription.
 
 ## BYOK on leantoken.tech
 
-In the OpenClaw context, BYOK means you connect your own API key for the model or gateway instead of relying only on the provider's OAuth subscription. In the saved GitHub material, OpenClaw explicitly separates two authentication paths:
+In the OpenClaw context, BYOK means connecting your own API key for the model or gateway instead of relying only on the provider's OAuth subscription. In the saved GitHub material, OpenClaw explicitly separates two authentication paths:
 
 - subscriptions through OAuth
 - API keys
@@ -54,7 +54,7 @@ For `leantoken.tech`, this is useful when you want to:
 
 The saved OpenClaw materials recommend building this setup around `openclaw onboard`, so the practical flow below is based on onboarding rather than undocumented manual edits to internal files.
 
-## How To Get An API Key On leantoken.tech
+## How to Get an API Key on leantoken.tech
 
 Before configuring OpenClaw, get your key and endpoint in LeanToken.
 
@@ -75,7 +75,7 @@ Before configuring OpenClaw, get your key and endpoint in LeanToken.
 7. Copy the generated API key.
 8. Keep both the endpoint and the key private. If the key is exposed, rotate it and replace it in OpenClaw.
 
-## How To Add BYOK
+## How to Add BYOK
 
 The flow below matches the saved OpenClaw materials best.
 
@@ -104,9 +104,9 @@ In practice, that means:
 3. Paste your LeanToken API key at the provider authentication step.
 4. Choose a model that is available through your LeanToken endpoint.
 
-The saved OpenClaw materials do not show exact onboarding screen labels for every version, so the wording in the wizard may differ slightly. But the overall logic in the source materials is stable: first auth, then model selection, then channels and skills.
+The saved OpenClaw materials do not show the exact names of every onboarding screen in every version, so the wording in the wizard may differ slightly. But the overall logic in the source materials is stable: first auth, then model selection, then channels and skills.
 
-### 3. Finish setting up Gateway and channels
+### 3. Finish configuring Gateway and channels
 
 After model/auth setup, finish onboarding:
 
@@ -147,12 +147,12 @@ openclaw gateway --port 18789 --verbose
 
 ## Recommended BYOK Scenarios
 
-BYOK through LeanToken is especially useful for OpenClaw when:
+BYOK through LeanToken is especially useful for OpenClaw in these tasks:
 
 - one assistant serves several channels and model access is centralized behind one key and endpoint
 - you want to control billing instead of depending only on an OAuth subscription
-- you need to switch models quickly for coding, research, summaries, or background automation
-- you want to keep the overall OpenClaw Gateway workflow while using your own model access path
+- you need to switch models quickly for coding, research, summaries, and background automation
+- you want to keep the overall Gateway workflow in OpenClaw while using your own model access path
 
 ## Practical Recommendations
 
@@ -164,7 +164,7 @@ The saved OpenClaw materials separately emphasize security and operational hygie
 - Use stricter isolation for group and channel scenarios if the assistant has shell or automation tool access.
 - Run `openclaw doctor` after setup if you want a quick way to surface risky or broken configuration.
 
-## What To Check After Setup
+## What to Check After Setup
 
 - OpenClaw starts without errors on your Node.js version
 - Gateway is available locally and opens the dashboard at `localhost:18789`

@@ -18,7 +18,7 @@
   "main": "scripts/serve.js",
   "scripts": {
     "start": "npm run build:docs && node scripts/serve.js",
-    "build:docs": "node node_modules/@diplodoc/cli/build/index.js --input docs --output docs-html && rm -rf docs-html/images && cp -R images docs-html/images"
+    "build:docs": "rm -rf docs-html && env DISABLE_PARALLEL_BUILD=1 node node_modules/@diplodoc/cli/build/index.js --input docs --output docs-html && rm -rf docs-html/images && cp -R images docs-html/images"
   },
   "dependencies": {
     "@diplodoc/cli": "^4.55.1",
