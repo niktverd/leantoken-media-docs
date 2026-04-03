@@ -3,5 +3,7 @@ description: Guias para conectar servicios de IA mediante Bring Your Own Key en 
 links:
   - title: JetBrains IDEs
     href: jetbrains-ides/byok.md
+  - title: OpenClaw
+    href: openclaw/byok.md
   - title: Fuentes de la documentacion
     href: source-repo.md

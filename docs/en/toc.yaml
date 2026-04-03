@@ -3,5 +3,7 @@ href: index.yaml
 items:
   - name: JetBrains IDEs
     href: jetbrains-ides/byok.md
+  - name: OpenClaw
+    href: openclaw/byok.md
   - name: Documentation Sources
     href: source-repo.md

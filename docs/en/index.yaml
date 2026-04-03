@@ -3,5 +3,7 @@ description: Guides for connecting AI services through Bring Your Own Key on lea
 links:
   - title: JetBrains IDEs
     href: jetbrains-ides/byok.md
+  - title: OpenClaw
+    href: openclaw/byok.md
   - title: Documentation Sources
     href: source-repo.md
