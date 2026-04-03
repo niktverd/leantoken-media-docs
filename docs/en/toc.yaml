@@ -5,5 +5,7 @@ items:
     href: jetbrains-ides/byok.md
   - name: OpenClaw
     href: openclaw/byok.md
+  - name: MiroFish
+    href: mirofish/byok.md
   - name: Documentation Sources
     href: source-repo.md

@@ -5,5 +5,7 @@ links:
     href: jetbrains-ides/byok.md
   - title: OpenClaw
     href: openclaw/byok.md
+  - title: MiroFish
+    href: mirofish/byok.md
   - title: Fuentes de la documentacion
     href: source-repo.md
