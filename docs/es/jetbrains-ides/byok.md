@@ -22,7 +22,7 @@ Segun el anuncio de JetBrains, BYOK admite claves API de Anthropic, OpenAI y otr
 
 JetBrains tambien incluyo un video corto en la entrada original: [Bring Your Own Key in JetBrains IDEs](https://www.youtube.com/watch?v=JcJyoFyLEOs).
 
-![AI chat de JetBrains usando modelos BYOK de terceros](../../images/jetbrains-ides-byok-chat.webp)
+![AI chat de JetBrains usando modelos BYOK de terceros](../../images/jetbrains/jetbrains-ides-byok-chat.webp)
 
 El selector de modelos del chat puede mostrar los modelos disponibles a traves del proveedor conectado, para que puedas cambiar de modelo directamente dentro del IDE.
 
@@ -30,18 +30,18 @@ El selector de modelos del chat puede mostrar los modelos disponibles a traves d
 
 Usa este flujo antes de configurar JetBrains IDEs:
 
-![Pagina publica de LeanToken con Sign up, Log in y Dashboard](../../images/leantoken.tech.1.landing.png)
+![Pagina publica de LeanToken con Sign up, Log in y Dashboard](../../images/leantoken/leantoken.tech.1.landing.png)
 
 1. Abre `https://leantoken.tech`.
 2. Haz clic en `Sign up` si todavia no tienes cuenta, en `Log in` si ya tienes una, o en `Dashboard` si ya has iniciado sesion.
 
-![Panel principal de LeanToken con el endpoint API y accesos rapidos](../../images/leantoken.tech.2.dashboard.png)
+![Panel principal de LeanToken con el endpoint API y accesos rapidos](../../images/leantoken/leantoken.tech.2.dashboard.png)
 
 3. Despues de iniciar sesion, abre el dashboard o la pagina de resumen.
 4. Copia el endpoint API que aparece alli. En las capturas, el endpoint es `https://api.leantoken.tech/v1`.
 5. Usa `Manage keys` o abre `API Keys` desde la barra lateral izquierda.
 
-![Pagina API Keys de LeanToken con la accion Create key](../../images/leantoken.tech.3.key-managment.png)
+![Pagina API Keys de LeanToken con la accion Create key](../../images/leantoken/leantoken.tech.3.key-managment.png)
 
 6. En la pagina `API Keys`, haz clic en `Create key`.
 7. Copia la API key generada que quieras usar en JetBrains IDEs.
@@ -51,11 +51,11 @@ Usa este flujo antes de configurar JetBrains IDEs:
 
 La entrada guardada del blog de JetBrains muestra la ruta de configuracion como `Settings | Tools | AI Assistant | Models`.
 
-![Configuracion BYOK anterior en la pagina Models](../../images/jetbrains-ides-byok-models-settings.webp)
+![Configuracion BYOK anterior en la pagina Models](../../images/jetbrains/jetbrains-ides-byok-models-settings.webp)
 
 En la interfaz mas reciente de tu captura, la configuracion aparece en `Settings | Tools | AI Assistant | Providers & API keys`.
 
-![Pantalla actual Providers & API keys de JetBrains para configurar BYOK](../../images/jetbrains-ides-byok-providers-api-keys.jpg)
+![Pantalla actual Providers & API keys de JetBrains para configurar BYOK](../../images/jetbrains/jetbrains-ides-byok-providers-api-keys.jpg)
 
 Flujo habitual en la interfaz actual:
 

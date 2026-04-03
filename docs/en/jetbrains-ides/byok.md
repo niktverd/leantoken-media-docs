@@ -22,7 +22,7 @@ According to the JetBrains announcement, BYOK supports API keys from Anthropic, 
 
 JetBrains also embedded a short walkthrough video in the source article: [Bring Your Own Key in JetBrains IDEs](https://www.youtube.com/watch?v=JcJyoFyLEOs).
 
-![JetBrains AI chat using third-party BYOK models](../../images/jetbrains-ides-byok-chat.webp)
+![JetBrains AI chat using third-party BYOK models](../../images/jetbrains/jetbrains-ides-byok-chat.webp)
 
 The chat model picker can expose the models available through your connected provider, so you can switch between models directly in the IDE.
 
@@ -30,18 +30,18 @@ The chat model picker can expose the models available through your connected pro
 
 Use this flow before configuring JetBrains IDEs:
 
-![LeanToken landing page with Sign up, Log in, and Dashboard](../../images/leantoken.tech.1.landing.png)
+![LeanToken landing page with Sign up, Log in, and Dashboard](../../images/leantoken/leantoken.tech.1.landing.png)
 
 1. Open `https://leantoken.tech`.
 2. Click `Sign up` if you do not have an account yet, `Log in` if you already have one, or `Dashboard` if you are already signed in.
 
-![LeanToken dashboard overview with API endpoint and quick links](../../images/leantoken.tech.2.dashboard.png)
+![LeanToken dashboard overview with API endpoint and quick links](../../images/leantoken/leantoken.tech.2.dashboard.png)
 
 3. After you sign in, open the dashboard or overview page.
 4. Copy the API endpoint shown there. In the screenshots, the endpoint is `https://api.leantoken.tech/v1`.
 5. Use `Manage keys` or open `API Keys` from the left sidebar.
 
-![LeanToken API Keys page with Create key action](../../images/leantoken.tech.3.key-managment.png)
+![LeanToken API Keys page with Create key action](../../images/leantoken/leantoken.tech.3.key-managment.png)
 
 6. On the `API Keys` page, click `Create key`.
 7. Copy the generated API key you want to use in JetBrains IDEs.
@@ -51,11 +51,11 @@ Use this flow before configuring JetBrains IDEs:
 
 The saved JetBrains blog post shows the setup path as `Settings | Tools | AI Assistant | Models`.
 
-![Older JetBrains BYOK setup under the Models page](../../images/jetbrains-ides-byok-models-settings.webp)
+![Older JetBrains BYOK setup under the Models page](../../images/jetbrains/jetbrains-ides-byok-models-settings.webp)
 
 In the newer UI from your screenshot, the configuration appears under `Settings | Tools | AI Assistant | Providers & API keys`.
 
-![Current JetBrains Providers & API keys screen for BYOK setup](../../images/jetbrains-ides-byok-providers-api-keys.jpg)
+![Current JetBrains Providers & API keys screen for BYOK setup](../../images/jetbrains/jetbrains-ides-byok-providers-api-keys.jpg)
 
 Typical flow in the current UI:
 
