@@ -24,40 +24,39 @@ This file defines the working rules for agents contributing to this repository.
 |  \- serve.js
 |- images/
 |  \- <published-doc-images>
-|- sources/
-|  \- projects/
-|     \- <service-slug>/
-|        |- README.md
-|        |- notes.md
-|        |- links.md
-|        \- assets/
 |- docs/
 |  |- images -> ../images
 |  \- ru/
 |     |- index.yaml
 |     |- toc.yaml
 |     \- <service-slug>/
-|        |- index.yaml
-|        |- toc.yaml
-|        \- byok.md
+|        |- byok.md
+|        \- source/
+|           |- <saved-pages-and-notes>
+|           \- <service-assets>
 |- docs-html/
 \- images/
 ```
 
+## Absolute Paths Used In This Repo
+
+- Published image store path: `/Users/niktverd/code/leantoken-tech-media-docs/images`
+- Docs-side image symlink path: `/Users/niktverd/code/leantoken-tech-media-docs/docs/images`
+- Service-local source folder pattern: `/Users/niktverd/code/leantoken-tech-media-docs/docs/ru/<service-slug>/source`
+- Current OpenClaw source folder: `/Users/niktverd/code/leantoken-tech-media-docs/docs/ru/openclaw/source`
+
 ## What Each Part Means
 
-- `sources/projects/` stores collected raw materials for each service: notes, links, screenshots, drafts, exported research, and any other working inputs.
-- `sources/projects/<service-slug>/` is the source-of-truth folder for everything collected about one service before publishing.
-- `sources/projects/<service-slug>/assets/` is the right place for raw screenshots, saved pages, temporary exports, and working visuals collected during research.
-- `images/` stores published images that are referenced by documentation pages.
+- `images/` is the canonical published image store for this repository.
+- `/Users/niktverd/code/leantoken-tech-media-docs/images` is the exact filesystem path where published documentation images must be stored.
 - `docs/images` points to the shared `images/` folder so the docs builder can resolve published images from inside `docs/`.
 - `docs/` stores the published content source used by Diplodoc.
 - `docs/ru/` is the active Russian content tree for the website.
 - `docs/ru/index.yaml` is the top-level landing page and must list every published service that should be visible from the main page.
 - `docs/ru/toc.yaml` is the top-level sidebar navigation and must include every published service section.
 - `docs/ru/<service-slug>/` contains the published content for one service.
-- `docs/ru/<service-slug>/index.yaml` defines the landing page for one service section.
-- `docs/ru/<service-slug>/toc.yaml` defines the sidebar navigation for one service section.
+- `docs/ru/<service-slug>/source/` stores collected raw materials for that service: saved pages, notes, screenshots, exported research, and any other working inputs that support the published page.
+- `/Users/niktverd/code/leantoken-tech-media-docs/docs/ru/openclaw/source` is the current source folder for the OpenClaw service and should be treated as the source-of-truth research folder for that project.
 - `docs/ru/<service-slug>/*.md` contains the actual published pages for one service.
 - `docs-html/` is generated build output. Do not edit it manually.
 
@@ -69,33 +68,34 @@ There are two main workflows in this repository.
 
 When a new service is introduced:
 
-1. Create a draft folder at `sources/projects/<service-slug>/`.
-2. Use this minimum draft structure:
-   - `README.md` for a short summary and current status.
-   - `notes.md` for raw notes and extracted facts.
-   - `links.md` for source links.
-   - `assets/` for screenshots, diagrams, exports, or supporting files.
-3. Create a published folder at `docs/ru/<service-slug>/`.
-4. Add `index.yaml` and `toc.yaml` inside that published folder.
-5. Add the initial content page, normally `byok.md`.
-6. Register the service in `docs/ru/index.yaml`.
-7. Register the service in `docs/ru/toc.yaml` with an `include` entry that points to `<service-slug>/toc.yaml`.
-8. Build and verify the result before finishing.
+1. Create a published folder at `docs/ru/<service-slug>/`.
+2. Create a source folder at `docs/ru/<service-slug>/source/`.
+3. Put all saved pages, notes, screenshots, exports, and research material into that `source/` folder.
+4. Add the initial content page, normally `byok.md`.
+5. Register the service in `docs/ru/index.yaml`.
+6. Register the service in `docs/ru/toc.yaml`.
+7. Build and verify the result before finishing.
+
+If a service currently has only one published page, keep it only in the common top-level navigation:
+
+- add it directly to `docs/ru/toc.yaml`
+- add it directly to `docs/ru/index.yaml`
+- do not create a service-local `toc.yaml` for that single-page service
+- do not create nested navigation until the service actually has more than one published page
 
 Recommended initial published shape:
 
 ```text
 docs/ru/<service-slug>/
-|- index.yaml
-|- toc.yaml
-\- byok.md
+|- byok.md
+\- source/
 ```
 
 ### 2. Create Content For A Service
 
 When the user asks for content for a service:
 
-1. Read the full directory at `sources/projects/<service-slug>/` first.
+1. Read the full directory at `docs/ru/<service-slug>/source/` first.
 2. Gather all stored information for that service before drafting.
 3. Write or update the Russian published page in `docs/ru/<service-slug>/`.
 4. The main document should explain how to add BYOK to that service.
@@ -137,8 +137,8 @@ If the screenshots show a concrete endpoint such as `https://api.leantoken.tech/
 
 Use two different asset locations on purpose:
 
-- keep raw or source-specific visuals in `sources/projects/<service-slug>/assets/`
-- keep published documentation images in the repo-level `images/` folder
+- keep raw or service-specific research materials in `docs/ru/<service-slug>/source/`
+- keep published documentation images in the repo-level `images/` folder at `/Users/niktverd/code/leantoken-tech-media-docs/images`
 
 When an image is used in a published page:
 
@@ -171,7 +171,8 @@ The three canonical LeanToken API-key screenshots are:
 ## Content Standards
 
 - Prefer one focused primary page per service before splitting content into multiple supporting pages.
-- Base the published text on the collected materials in `sources/projects/<service-slug>/`. Do not invent unsupported technical details.
+- If a project has only one published page, it must live only in the common top-level TOC and top-level landing page entries, not in a separate service-local TOC.
+- Base the published text on the collected materials in `docs/ru/<service-slug>/source/`. Do not invent unsupported technical details.
 - Convert raw notes into clean end-user documentation. Do not paste internal scraps directly into published pages.
 - Keep examples concrete. AI use cases should match the actual capabilities of the service instead of generic claims.
 - Keep headings, page titles, and navigation labels aligned with the actual page content.
@@ -194,8 +195,8 @@ The three canonical LeanToken API-key screenshots are:
 
 ## Editing Rules
 
-- Prefer editing `sources/projects/<service-slug>/` and `docs/ru/<service-slug>/` instead of adding more root-level sample pages.
+- Prefer editing `docs/ru/<service-slug>/source/` and `docs/ru/<service-slug>/` instead of adding more root-level sample pages.
 - Keep file names stable, descriptive, and service-specific.
 - If you move or rename a file, update all affected `href` references in the same change.
-- If you publish an image, place it in `images/` and update the Markdown reference in the same change.
+- If you publish an image, place it in `/Users/niktverd/code/leantoken-tech-media-docs/images` and update the Markdown reference in the same change.
 - Do not manually edit generated files under `docs-html/`.
