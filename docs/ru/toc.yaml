@@ -7,3 +7,5 @@ items:
     href: jetbrains-ides/byok.md
   - name: MiroFish
     href: mirofish/byok.md
+  - name: LangChain
+    href: langchain/byok.md

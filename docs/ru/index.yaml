@@ -7,3 +7,5 @@ links:
     href: openclaw/byok.md
   - title: MiroFish
     href: mirofish/byok.md
+  - title: LangChain
+    href: langchain/byok.md
