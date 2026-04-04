@@ -39,7 +39,7 @@ This repository builds into one static website and now includes a production `Do
 
 - builds the docs with `npm run build:docs`
 - serves `docs-html/` with `nginx`
-- redirects `/` to `/ru/index.html` to match the intended primary language entrypoint
+- redirects `/` based on the browser `Accept-Language` header, with English fallback
 
 ### Dokploy setup
 
