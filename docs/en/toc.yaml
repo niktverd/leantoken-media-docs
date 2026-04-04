@@ -5,6 +5,8 @@ items:
     href: jetbrains-ides/byok.md
   - name: OpenClaw
     href: openclaw/byok.md
+  - name: Obsidian
+    href: obsidian/byok.md
   - name: MiroFish
     href: mirofish/byok.md
   - name: LangChain

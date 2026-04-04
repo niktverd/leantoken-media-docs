@@ -3,6 +3,8 @@ href: index.yaml
 items:
   - name: OpenClaw
     href: openclaw/byok.md
+  - name: Obsidian
+    href: obsidian/byok.md
   - name: JetBrains IDEs
     href: jetbrains-ides/byok.md
   - name: MiroFish
