@@ -9,3 +9,5 @@ links:
     href: mirofish/byok.md
   - title: LangChain
     href: langchain/byok.md
+  - title: LightRAG
+    href: lightrag/byok.md
