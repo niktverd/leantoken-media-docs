@@ -13,3 +13,5 @@ links:
     href: langchain/byok.md
   - title: LightRAG
     href: lightrag/byok.md
+  - title: n8n
+    href: n8n/byok.md

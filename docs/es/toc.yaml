@@ -13,3 +13,5 @@ items:
     href: langchain/byok.md
   - name: LightRAG
     href: lightrag/byok.md
+  - name: n8n
+    href: n8n/byok.md
