@@ -15,3 +15,5 @@ items:
     href: lightrag/byok.md
   - name: n8n
     href: n8n/byok.md
+  - name: Roo Code
+    href: roocode/byok.md

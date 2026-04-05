@@ -1,0 +1,16 @@
+site https://roocode.com/
+docs https://docs.roocode.com/
+docs-installing https://docs.roocode.com/getting-started/installing
+docs-connecting-provider https://docs.roocode.com/getting-started/connecting-api-provider
+docs-providers https://docs.roocode.com/providers/
+docs-provider-openai https://docs.roocode.com/providers/openai
+docs-provider-openai-compatible https://docs.roocode.com/providers/openai-compatible
+docs-provider-litellm https://docs.roocode.com/providers/litellm
+docs-config-profiles https://docs.roocode.com/features/api-configuration-profiles
+docs-modes https://docs.roocode.com/basic-usage/using-modes
+docs-tools https://docs.roocode.com/basic-usage/how-tools-work
+docs-mentions https://docs.roocode.com/basic-usage/context-mentions
+docs-tips https://docs.roocode.com/tips-and-tricks
+docs-codebase-indexing https://docs.roocode.com/features/codebase-indexing
+local-screenshot ../../../../images/roocode/roocode.png
+marketplace https://marketplace.visualstudio.com/search?term=Roo%20Code&target=VSCode
