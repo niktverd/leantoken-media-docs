@@ -21,3 +21,5 @@ items:
     href: kilo-code-assistant/byok.md
   - name: Cline
     href: cline/byok.md
+  - name: SourceCraft Code Assistant
+    href: sourcecraft-code-assistant/byok.md
