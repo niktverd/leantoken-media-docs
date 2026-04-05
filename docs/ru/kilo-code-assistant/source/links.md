@@ -1,0 +1,17 @@
+site https://kilo.ai/
+docs https://kilo.ai/docs
+docs-getting-started https://kilo.ai/docs/getting-started
+docs-installing https://kilo.ai/docs/getting-started/installing
+docs-quickstart https://kilo.ai/docs/getting-started/quickstart
+docs-setup-authentication https://kilo.ai/docs/getting-started/setup-authentication
+docs-settings https://kilo.ai/docs/getting-started/settings
+docs-auto-approve https://kilo.ai/docs/getting-started/settings/auto-approving-actions
+docs-provider-kilo https://kilo.ai/docs/ai-providers/kilocode
+docs-provider-openai-compatible https://kilo.ai/docs/ai-providers/openai-compatible
+docs-agents https://kilo.ai/docs/code-with-ai/agents/using-agents
+docs-context-mentions https://kilo.ai/docs/code-with-ai/agents/context-mentions
+docs-model-selection https://kilo.ai/docs/code-with-ai/agents/model-selection
+docs-auto-model https://kilo.ai/docs/code-with-ai/agents/auto-model
+docs-autocomplete https://kilo.ai/docs/code-with-ai/features/autocomplete
+docs-custom-agents https://kilo.ai/docs/customize/custom-modes
+local-screenshot ../../../../images/kilo/kilo.png
