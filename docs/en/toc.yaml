@@ -17,3 +17,5 @@ items:
     href: n8n/byok.md
   - name: Roo Code
     href: roocode/byok.md
+  - name: Cline
+    href: cline/byok.md

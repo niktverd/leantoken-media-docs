@@ -1,0 +1,15 @@
+site https://cline.bot/
+docs https://docs.cline.bot/
+docs https://docs.cline.bot/introduction/overview
+docs https://docs.cline.bot/getting-started/installing-cline
+docs https://docs.cline.bot/getting-started/authorizing-with-cline
+docs https://docs.cline.bot/provider-config/openai-compatible
+docs https://docs.cline.bot/features/tasks/understanding-tasks
+docs https://docs.cline.bot/features/plan-and-act
+docs https://docs.cline.bot/core-workflows/checkpoints
+docs https://docs.cline.bot/features/auto-approve
+docs https://docs.cline.bot/mcp/mcp-overview
+docs https://docs.cline.bot/customization/overview
+docs https://docs.cline.bot/customization/clineignore
+docs https://docs.cline.bot/prompting/cline-memory-bank
+docs https://docs.cline.bot/features/hooks/index
